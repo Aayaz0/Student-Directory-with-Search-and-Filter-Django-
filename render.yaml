@@ -10,4 +10,4 @@ services:
       - key: SECRET_KEY
         generateValue: true
       - key: ALLOWED_HOSTS
-        value: "*"
+        value: "student-directory-with-search-and-filter-o4k5.onrender.com,*.onrender.com"
