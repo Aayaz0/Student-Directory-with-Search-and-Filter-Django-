@@ -1,0 +1,33 @@
+{% extends 'students/base.html' %}
+{% block content %}
+    <h2>Search Results for "{{ query }}"</h2>
+    
+    <form class="search-form" action="{% url 'search_students' %}" method="get">
+        <input type="text" name="q" placeholder="Search by name, ID, or department" value="{{ query }}" required>
+        <button type="submit">Search Again</button>
+    </form>
+    
+    {% if students %}
+        <h3>Found {{ students|length }} student{{ students|length|pluralize }}:</h3>
+        <ul>
+        {% for student in students %}
+            <li>
+                <strong>{{ student.name }}</strong><br>
+                <small>Student ID: {{ student.student_id }} | Department: {{ student.department }}</small>
+                {% if student.created_by %}
+                    <br><small>Added by: {{ student.created_by.username }}</small>
+                {% endif %}
+            </li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <div style="padding: 20px; background-color: #f8d7da; color: #721c24; border-radius: 5px; margin: 20px 0;">
+            <h3>No students found</h3>
+            <p>No students match your search criteria "{{ query }}". Try searching with different keywords.</p>
+        </div>
+    {% endif %}
+    
+    <div style="margin-top: 30px;">
+        <a href="{% url 'index' %}" style="display: inline-block; padding: 10px 20px; background-color: #6c757d; color: white; border-radius: 4px;">← Back to Home</a>
+    </div>
+{% endblock %}
