@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Student Directory System
 
 A modern web application for managing student records in educational institutions, built with Django and Python.
@@ -140,34 +141,9 @@ student_directory/
 - DigitalOcean App Platform
 - AWS Elastic Beanstalk
 
-### Environment Variables (Production)
-```bash
-DEBUG=False
-SECRET_KEY=your-secret-key
-DATABASE_URL=your-database-url
-ALLOWED_HOSTS=your-domain.com
-```
 
-## 📈 Performance Metrics
 
-| Operation | Response Time | Database Queries |
-|-----------|---------------|------------------|
-| Home Page | < 50ms | 1 |
-| Search | < 100ms | 1 |
-| API Call | < 30ms | 1 |
-| Admin Login | < 200ms | 2 |
 
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## 📝 License
-
-This project is open source and available under the [MIT License](LICENSE).
 
 ## 👨‍💻 Author
 
@@ -179,13 +155,6 @@ This project is open source and available under the [MIT License](LICENSE).
 - Django REST Framework for API capabilities
 - All contributors to the open-source packages used
 
-## 📞 Support
 
-If you have any questions or need support, please:
-1. Check the existing issues
-2. Create a new issue with detailed description
-3. Contact the maintainer
 
----
-
-⭐ **If you find this project helpful, please give it a star!** ⭐
+⭐ **If you find this project helpful, please give it a star!*
