@@ -27,11 +27,11 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-v=dntknaug$bjce#wd)(c
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG', 'True') == 'True'
 
-# For production, allow all Render domains and local development
+# For production, allow all hosts when RENDER environment is detected
 if os.environ.get('RENDER'):
-    ALLOWED_HOSTS = ['*']  # Render environment
+    ALLOWED_HOSTS = ['*']
 else:
-    ALLOWED_HOSTS = ['localhost', '127.0.0.1']  # Local development
+    ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 
 # Application definition
