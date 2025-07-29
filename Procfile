@@ -1,1 +1,1 @@
-web: gunicorn student_directory.wsgi
+web: python -m gunicorn student_directory.wsgi:application
