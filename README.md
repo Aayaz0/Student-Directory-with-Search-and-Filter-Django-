@@ -11,42 +11,49 @@ A modern web application for managing student records in educational institution
 - **API**: Django REST Framework
 - **Deployment**: Gunicorn + Cloud Platforms
 
-## 🚀 Quick Start
+
 
 ### Prerequisites
+
 - Python 3.11 or higher
 - pip (Python package installer)
 
 ### Installation
 
 1. **Clone the repository**
+
    ```bash
    git clone https://github.com/Aayaz0/Student-Directory-with-Search-and-Filter-Django-.git
    cd Student-Directory-with-Search-and-Filter-Django-
    ```
 
 2. **Create virtual environment**
+
    ```bash
    python -m venv venv
    source venv/bin/activate  # On Windows: venv\Scripts\activate
    ```
 
 3. **Install dependencies**
+
    ```bash
    pip install -r requirements.txt
    ```
 
 4. **Run migrations**
+
    ```bash
    python manage.py migrate
    ```
 
 5. **Create superuser**
+
    ```bash
    python manage.py createsuperuser
    ```
 
 6. **Start development server**
+
    ```bash
    python manage.py runserver
    ```
@@ -59,6 +66,7 @@ A modern web application for managing student records in educational institution
 ## 📊 Sample Data
 
 The application comes with 50 sample student records across various departments including:
+
 - Computer Science
 - Information Technology
 - Software Engineering
@@ -69,17 +77,15 @@ The application comes with 50 sample student records across various departments 
 ## 🔍 Usage
 
 ### Search Functionality
+
 - Search by **student name**: "Aayush", "Sharma"
 - Search by **student ID**: "001", "025"
 - Search by **department**: "Computer", "Information"
 
-### Admin Interface
-- Add new students
-- Edit existing records
-- Delete students
-- Bulk operations
+
 
 ### API Access
+
 ```bash
 # Get all students (JSON)
 curl http://127.0.0.1:8000/api/students/
@@ -118,14 +124,16 @@ student_directory/
 - **Password Hashing**: Passwords encrypted using Django's built-in system
 
 ## 🚀 Deployment
-render 
+
 ### Deployment-Ready Features
+
 - ✅ Procfile for Gunicorn server
 - ✅ requirements.txt with all dependencies
 - ✅ runtime.txt specifying Python version
 - ✅ Environment variables support
 
 ### Supported Platforms
+
 - Heroku
 - Render
 - Railway
@@ -133,12 +141,12 @@ render
 - AWS Elastic Beanstalk
 
 ### Environment Variables (Production)
+
 ```bash
 DEBUG=False
 SECRET_KEY=your-secret-key
 DATABASE_URL=your-database-url
 ALLOWED_HOSTS=your-domain.com
-```
 
 
 ⭐ **If you find this project helpful, please give it a star!** ⭐
