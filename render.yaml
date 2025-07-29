@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: student-directory-django
+    env: python
+    buildCommand: "./build.sh"
+    startCommand: "gunicorn student_directory.wsgi:application"
+    envVars:
+      - key: DEBUG
+        value: False
+      - key: SECRET_KEY
+        generateValue: true
+      - key: ALLOWED_HOSTS
+        value: "*"
