@@ -2,15 +2,6 @@
 
 A modern web application for managing student records in educational institutions, built with Django and Python.
 
-## 🎯 Features
-
-- **Secure Authentication** - Login system protecting student data
-- **Advanced Search** - Search by name, student ID, or department
-- **Admin Interface** - Easy-to-use management panel for CRUD operations
-- **REST API** - JSON endpoints for external applications
-- **Responsive Design** - Works on desktop, tablet, and mobile devices
-- **Cloud Ready** - Configured for deployment on modern platforms
-
 
 ## 🏗️ Technology Stack
 
@@ -139,7 +130,7 @@ student_directory/
 - **Password Hashing**: Passwords encrypted using Django's built-in system
 
 ## 🚀 Deployment
-
+render
 ### Deployment-Ready Features
 
 - ✅ Procfile for Gunicorn server
@@ -162,6 +153,9 @@ DEBUG=False
 SECRET_KEY=your-secret-key
 DATABASE_URL=your-database-url
 ALLOWED_HOSTS=your-domain.com
+```
+
+
 
 
 ⭐ **If you find this project helpful, please give it a star!** ⭐
