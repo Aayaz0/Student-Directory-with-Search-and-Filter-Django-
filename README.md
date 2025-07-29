@@ -128,11 +128,6 @@ student_directory/
 
 ## 🚀 Deployment
 
-### Deployment-Ready Features
-- ✅ Procfile for Gunicorn server
-- ✅ requirements.txt with all dependencies
-- ✅ runtime.txt specifying Python version
-- ✅ Environment variables support
 
 ### Supported Platforms
 - Heroku
@@ -149,11 +144,6 @@ student_directory/
 
 **Aayaz** - [GitHub Profile](https://github.com/Aayaz0)
 
-## 🙏 Acknowledgments
-
-- Django Team for the amazing framework
-- Django REST Framework for API capabilities
-- All contributors to the open-source packages used
 
 
 
