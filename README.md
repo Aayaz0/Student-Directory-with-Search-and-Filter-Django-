@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Student Directory System
 
 A modern web application for managing student records in educational institutions, built with Django and Python.
@@ -189,3 +190,6 @@ If you have any questions or need support, please:
 ---
 
 ⭐ **If you find this project helpful, please give it a star!** ⭐
+=======
+# Student-Directory-with-Search-and-Filter-Django-
+>>>>>>> 728ae15b7cdcb0a0d8859022b870dba295374cfe
