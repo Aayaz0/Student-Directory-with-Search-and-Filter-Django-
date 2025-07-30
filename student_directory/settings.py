@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 
 from pathlib import Path
 import os
-import dj_database_url
+from urllib.parse import urlparse
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -83,9 +83,21 @@ WSGI_APPLICATION = 'student_directory.wsgi.application'
 
 # Use PostgreSQL in production (Render), SQLite in development
 if os.environ.get('RENDER'):
-    DATABASES = {
-        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
-    }
+    database_url = os.environ.get('DATABASE_URL')
+    if database_url:
+        url = urlparse(database_url)
+        DATABASES = {
+            'default': {
+                'ENGINE': 'django.db.backends.postgresql',
+                'NAME': url.path[1:],  # skip the leading '/'
+                'USER': url.username,
+                'PASSWORD': url.password,
+                'HOST': url.hostname,
+                'PORT': url.port or '',
+            }
+        }
+    else:
+        raise Exception('DATABASE_URL environment variable is not set in production environment')
 else:
     DATABASES = {
         'default': {

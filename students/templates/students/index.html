@@ -1,22 +1,33 @@
-{% extends 'students/base.html' %}
-{% block content %}
-    <h2>Welcome to the Student Directory</h2>
-    <p>Search for students by name, student ID, or department.</p>
-    
-    <form class="search-form" action="{% url 'search_students' %}" method="get">
-        <input type="text" name="q" placeholder="Search by name, ID, or department" required>
-        <button type="submit">Search</button>
-    </form>
-    
-    <div style="margin-top: 30px; padding: 15px; background-color: #e9ecef; border-radius: 5px;">
-        <h3>Quick Access:</h3>
-        <ul style="margin: 10px 0;">
-            <li style="border: none; background: none; padding: 5px 0;">
-                <a href="/admin/">Admin Panel</a> - Add/Edit Students
-            </li>
-            <li style="border: none; background: none; padding: 5px 0;">
-                <a href="/api/students/">API Endpoint</a> - JSON data for all students
-            </li>
-        </ul>
-    </div>
+{% extends 'students/base.html' %} {% block content %}
+<h2>Welcome to the Student Directory</h2>
+<p>Search for students by name, student ID, or department.</p>
+
+<form class="search-form" action="{% url 'search_students' %}" method="get">
+  <input
+    type="text"
+    name="q"
+    placeholder="Search by name, ID, department, parent name, or phone"
+    required
+  />
+  <button type="submit">Search</button>
+</form>
+
+<div
+  style="
+    margin-top: 30px;
+    padding: 15px;
+    background-color: #e9ecef;
+    border-radius: 5px;
+  "
+>
+  <h3>Quick Access:</h3>
+  <ul style="margin: 10px 0">
+    <li style="border: none; background: none; padding: 5px 0">
+      <a href="/admin/">Admin Panel</a> - Add/Edit Students
+    </li>
+    <li style="border: none; background: none; padding: 5px 0">
+      <a href="/api/students/">API Endpoint</a> - JSON data for all students
+    </li>
+  </ul>
+</div>
 {% endblock %}

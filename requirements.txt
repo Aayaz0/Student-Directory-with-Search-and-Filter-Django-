@@ -3,4 +3,3 @@ djangorestframework==3.14.0
 gunicorn[setproctitle]==23.0.0
 whitenoise==6.8.2
 psycopg==3.2.1
-dj-database-url==2.2.0

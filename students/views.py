@@ -15,7 +15,11 @@ def index(request):
 def search_students(request):
     query = request.GET.get('q', '')
     students = Student.objects.filter(
-        Q(name__icontains=query) | Q(student_id__icontains=query) | Q(department__icontains=query)
+        Q(name__icontains=query) | 
+        Q(student_id__icontains=query) | 
+        Q(department__icontains=query) |
+        Q(parent_name__icontains=query) |
+        Q(parent_phone__icontains=query)
     ) if query else []
     return render(request, 'students/search_results.html', {'students': students, 'query': query})
 
